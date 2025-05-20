@@ -17,6 +17,7 @@ def create
 # save Contact row
 @entry.save
 
+
   # redirect user to place specific view
   redirect_to "/places/#{params["id"]}"
 end

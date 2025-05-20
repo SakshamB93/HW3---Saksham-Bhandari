@@ -3,11 +3,15 @@ class PlacesController < ApplicationController
     @places = Place.all
   end
 
+
+
   def show
     # Action to handle place view with entries
     @place = Place.find_by("id" => params["id"])
     @entries = Entry.where("place_id" => params["id"])
   end
+
+
 
   def new
   end
@@ -25,4 +29,7 @@ class PlacesController < ApplicationController
     # redirect user to homepage
     redirect_to "/"
   end
+
+
+  
 end

@@ -1,5 +1,6 @@
 <h1><%= @place["name"] %></h1>
 
+
 <% if @entries.present? %> <!-- To check if @entries exists and has data -->
   <% for entry in @entries %> 
       <h3><%= entry["title"] %></h3>
@@ -10,9 +11,11 @@
   <p>No posts found.</p>
 <% end %>
 
+
 <p> 
-  <a href="/entries/new?id=<%= @place["id"] %>">Add a new post</a> <!-- Passing place id as a param to map new entry to place -->
+  <a href="/entries/new?id=<%= @place["id"] %>">Add new post</a> <!-- Passing place id as a param to map new entry to place -->
 </p>
 <p> 
-  <a href="/">Go back to places list</a> 
+  <a href="/">Go back to places lists</a> 
 </p>
+

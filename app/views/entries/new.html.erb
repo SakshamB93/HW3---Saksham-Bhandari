@@ -1,5 +1,7 @@
 <h1>New Post for <%=@place["name"]%></h1>
 
+
+
 <form action="/entries/new?id=<%= @place["id"] %>" method="post">
   <p>
     <label for="title">Title</label>
@@ -14,7 +16,10 @@
   </p>
   
   <button>Submit</button>
+  
   <p>
     <a href="/places/<%= @place["id"] %>">Go back to posts</a>
   </p>
+
+
 </form>
